@@ -25,8 +25,8 @@ namespace Lab6
                 "Logan",
                 "Matt",
                 "Radeen",
-                "Raston Gilbert",
-                "Scott Thayer",
+                "Raston",
+                "Scott",
                 "Yash",
                 "Yousif"
                 };
