@@ -13,6 +13,7 @@ namespace Lab6
             bool tryAgain = true;
             while (tryAgain == true)
             {
+                //copied the list of names from lecture time, different order than the post with names, hometowns and foods
                 String[] names = {
 
                 "Justin",
@@ -67,7 +68,7 @@ namespace Lab6
                 int studentChosen = -1;
                 int searchType;
                 {
-                    //checks to make sure you choose 1 or 2
+                    //checks to make sure you choose 1 or 2 to decide how you look for students
                     while (true)
                     {
                         Console.WriteLine("Welcome to our C# class. Here you can learn more about the students. 1 will let you find a student by number and 2 will let you find a student by name.");
@@ -107,7 +108,7 @@ namespace Lab6
                             string nameGiven = Console.ReadLine();
                             for (int l = 0; l < names.Length; l++)
                             {
-                                if (nameGiven.ToLower() == names[l].ToLower())
+                                if (nameGiven.ToLower().Trim() == names[l].ToLower())
                                 {
                                     studentChosen = l;
                                     break;
@@ -130,6 +131,7 @@ namespace Lab6
                     string findWithInfo;
                     while (true)
                     {
+                        //checks to make sure you enter either hometown or favorite food then breaks out of it
                         Console.WriteLine($"(enter /“hometown/” or /“favorite food/”)");
                         findWithInfo = Console.ReadLine();
                         if (findWithInfo.ToLower() == "hometown")
@@ -169,6 +171,7 @@ namespace Lab6
                 }
                 while (true)
                 {
+                    //asks to retry.
                     Console.WriteLine("Do you want to check a different student? yes or no");
                     string tryAgainAnswer = Console.ReadLine();
                     if (tryAgainAnswer == "no")
