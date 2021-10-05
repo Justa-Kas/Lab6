@@ -88,7 +88,7 @@ namespace Lab6
                         {
                             Console.WriteLine("Which student would you like to learn about. Enter a number 0-13.");
                             studentChosen = int.Parse(Console.ReadLine());
-                            if (studentChosen < 1 || studentChosen > names.Length)
+                            if (studentChosen < 0 || studentChosen >= names.Length)
                             {
                                 Console.WriteLine("That student does not exist. Please try again.");
                             }
@@ -118,7 +118,7 @@ namespace Lab6
                                     break;
                                 }
                             }
-                            if (studentChosen <= 0 || studentChosen >= names.Length)
+                            if (studentChosen < 0 || studentChosen >= names.Length)
                             {
                                 Console.WriteLine("That student does not exist.");
                             }
